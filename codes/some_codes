@@ -1,0 +1,62 @@
+There are some codes i didn't use.
+Essentialy for scraping.
+
+
+"""        title1 = "Période"
+        title2 = "Var."
+        title3 = "+ HAUT"
+        title4 = "+ BAS"
+        title_list = [title1, title2, title3, title4]
+
+        first_var_w_space = soup.find_all(class_="c-table__cell c-table__cell--dotted c-table__cell--positive")[0]
+        first_var = ' '.join(first_var_w_space)
+
+        s_var_w_space = soup.find_all(class_="c-table__cell c-table__cell--dotted c-table__cell--positive")[1]
+        s_var = ' '.join(s_var_w_space)
+
+        m_var_w_space = soup.find_all(class_="c-table__cell c-table__cell--dotted c-table__cell--positive")[2]
+        m_var = ' '.join(m_var_w_space)
+
+        y_var_w_space = soup.find_all(class_="c-table__cell c-table__cell--dotted c-table__cell--positive")[5]
+        y_var = ' '.join(y_var_w_space)
+
+        three_y_var_w_space = soup.find_all(class_="c-table__cell c-table__cell--dotted c-table__cell--positive")[6]
+        three_y_var = ' '.join(three_y_var_w_space)
+"""
+
+"""        df_hist_data_w_space = soup.find_all(class_="c-block__body")[12].get_text()
+        df_hist_data = " ".join(df_hist_data_w_space.split()) #7 = tableau de prévisions
+"""
+
+"""        idx = []
+        dta = []
+        for title in tag_title:
+            idx.append(title.find("dt").text)
+            dta.append(title.find("dd").text.strip())
+        tag_df = pd.DataFrame(dta, index=idx)"""
+
+"""        date_list = ["1er", "1s", "1m", "1a", "5a", "10a"]
+        if date not in date_list:
+            await ctx.send("Choisis une date parmis cette liste : \n"
+                           "1er : 1er janvier de l'année en cours \n"
+                           "1s : semaine qui vient de passer \n"
+                           "1m : mois qui vient de passer \n"
+                           "1a : année qui vient de passer \n"
+                           "3a : 3 années qui viennent de passer \n"
+                           "5a : 5 années qui viennent de passer \n"
+                           "10a : 10 années qui viennent de passer")
+        else:
+            if date == "1er":
+                var_act_results = soup.find(class_='c-table__cell c-table__cell--dotted c-table__cell--positive')
+                highest_act_results = soup.find(class_='c-table__cell c-table__cell--dotted')
+                lower_act_results = soup.find(class_='c-table__cell c-table__cell--dotted u-nopadding-right')
+                await ctx.send(f"La variation est de : {var_act_results.text} € \n"
+                               f"Le plus haut a été de : {highest_act_results.text} € \n"
+                               f"et son plus bas a été de : {lower_act_results} €")
+
+            elif date == "1s":
+                var_act_results = soup.find(class_='c-table__cell c-table__cell--dotted c-table__cell--positive')
+                highest_act_results = soup.find(class_='c-table__cell c-table__cell--dotted')
+                lower_act_results = soup.find(class_='c-table__cell c-table__cell--dotted u-nopadding-right')
+                await ctx.send(f"La variation est de : {var_act_results.text} € \n"
+                               f"Le plus haut a été de : {highest_act_results.text}")"""
